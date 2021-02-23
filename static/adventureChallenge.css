@@ -1,0 +1,57 @@
+.header {
+  background: #bc1a7b;
+}
+
+#homeButton {
+  background-color: #bc1a7b;
+}
+
+button {
+  border-color: #bc1a7b;
+}
+
+button:hover {
+  background-color: #bc1a7b;
+  color: white;
+}
+
+#resultBlock {
+  text-align: center;
+  font-family: "Work Sans";
+  font-size: 36px;
+  flex-grow: 2;
+}
+
+#pageContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+#inputs {
+  flex-grow: 1;
+  text-align: center;
+}
+
+#formContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Work Sans";
+}
+
+label {
+  font-size: 20px;
+  margin: 20px;
+}
+
+select {
+  width: 50%;
+}
+
+#submitButton {
+  margin: 20px;
+  font-family: "Work Sans";
+  width: 20%;
+  font-size: 20px;
+}

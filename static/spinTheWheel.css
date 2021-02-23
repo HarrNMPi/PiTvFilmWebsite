@@ -1,0 +1,61 @@
+.header {
+  background: #ffae23
+}
+
+#homeButton {
+  background-color: #ffae23
+}
+
+button {
+  border-color: #ffae23
+}
+
+button:hover {
+  background-color: #ffae23;
+  color: white;
+}
+
+#backButton {
+  color: black;
+  background-color: white;
+  font-size: 16px;
+  padding: 5px;
+  width: 7%;
+  text-align: center;
+  position: absolute;
+  left: 0px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#spinAgainContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#spinAgain {
+color: black;
+  background-color: white;
+  font-size: 16px;
+  padding: 5px;
+  width: 7%;
+  text-align: center;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#backButton:hover, #spinAgain:hover {
+  background-color: #ffae23;
+  color: white;
+}
+
+#result {
+  font-family: "Work Sans";
+  font-size: 36px;
+}
+
+#resultBlock {
+  text-align: center;
+}

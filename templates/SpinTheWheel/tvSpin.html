@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spin The Wheel</title>
+    <link rel="stylesheet" type="text/css" href="/static/genericStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/spinTheWheel.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300">
+</head>
+<script>
+    function homeClick() {
+        location.href = "/"
+    }
+    function backClick() {
+        location.href = "/SpinTheWheel"
+    }
+</script>
+    <body>
+        <div class="header">
+            <h1>TV</h1>
+            <button id="homeButton" onClick="homeClick()">Home</button>
+        </div>
+        <button id="backButton" onClick="backClick()">Back</button>
+        <div id="resultBlock">
+            <p id="result">{{result}}</p>
+        </div>
+        <div id="spinAgainContainer">
+            <button id="spinAgain" onclick="window.location.reload();">Spin Again</button>
+        </div>
+        <footer id="copyright">&copy Copyright 2021 Millmyster</footer>
+    </body>
+</html>

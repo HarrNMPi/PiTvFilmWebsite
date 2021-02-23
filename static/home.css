@@ -1,0 +1,16 @@
+.header {
+  background: #1abc9c
+}
+
+#homeButton {
+  background-color: #1abc9c
+}
+
+button {
+  border-color: #1abc9c
+}
+
+button:hover {
+  background-color: #1abc9c;
+  color: white;
+}

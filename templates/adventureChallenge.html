@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adventure Challenge</title>
+    <link rel="stylesheet" type="text/css" href="/static/genericStyle.css">
+    <link rel="stylesheet" type="text/css" href="/static/adventureChallenge.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:900|Work+Sans:300">
+</head>
+<script>
+    function homeClick() {
+        location.href = "/"
+    }
+</script>
+    <body>
+        <div class="header">
+            <h1>Adventure Challenge</h1>
+            <button id="homeButton" onClick="homeClick()">Home</button>
+        </div>
+        <div id="pageContainer">
+            <div id="inputs">
+                <form action="" method="get" id="formContainer">
+                    <label for="location">Location</label>
+                    <select id="location" name="location">
+                        <option value="blank"></option>
+                        <option value="indoors">Indoors</option>
+                        <option value="outdoors">Outdoors</option>
+                        <option value="either">Either</option>
+                    </select>
+                    <label for="when">When</label>
+                    <select id="when" name="when">
+                        <option value="blank"></option>
+                        <option value="daytime">Daytime</option>
+                        <option value="evening">Evening</option>
+                        <option value="either">Either</option>
+                    </select>
+                    <label for="supplies">Supplies Required?</label>
+                    <select id="supplies" name="supplies">
+                        <option value="blank"></option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                        <option value="either">Either</option>
+                    </select>
+                    <input type="submit" value="Submit" id="submitButton">
+                </form>
+            </div>
+            <div id="resultBlock">
+                <p id="result">{{challenge_number}}</p>
+            </div>
+        </div>
+        <footer id="copyright">&copy Copyright 2021 Millmyster</footer>
+    </body>
+</html>
