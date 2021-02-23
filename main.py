@@ -50,7 +50,9 @@ def nba():
     team = answer_list[0]
     opp = answer_list[1]
     date = answer_list[2]
-    return render_template('NBA.html', team=team, opp=opp, date=date)
+    home_logo = "static/images/Logos/" + team + ".png"
+    away_logo = "static/images/Logos/" + opp + ".png"
+    return render_template('NBA.html', team=team, opp=opp, date=date, away_logo=away_logo, home_logo=home_logo)
 
 
 # Adventure Challenge

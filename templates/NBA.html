@@ -16,9 +16,17 @@
             <h1>NBA</h1>
             <button id="homeButton" onClick="homeClick()">Home</button>
         </div>
-        <div id="resultBlock">
-            <p id="result">{{team}} vs {{opp}}</p>
-            <p id="resultDate">{{date}}</p>
+        <div id="pageContainer">
+            <p id="homeLogo">
+                <img src="{{home_logo}}">
+            </p>
+            <div id="resultBlock">
+                <p id="result">{{team}} vs {{opp}}</p>
+                <p id="resultDate">{{date}}</p>
+            </div>
+            <p id="awayLogo">
+                <img src="{{away_logo}}">
+            </p>
         </div>
         <footer id="copyright">&copy Copyright 2021 Millmyster</footer>
     </body>
