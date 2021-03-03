@@ -47,10 +47,10 @@ def paint_wheel():
 
 @app.route('/NBA')
 def nba():
-    # answer_list = get_games()
-    team = "MIL"
-    opp = "DEN"
-    date = "2021-03-02"
+    answer_list = get_games()
+    team = answer_list[0]
+    opp = answer_list[1]
+    date = answer_list[2]
     home_logo = "static/images/Logos/" + team + ".png"
     away_logo = "static/images/Logos/" + opp + ".png"
     return render_template('NBA.html', team=team, opp=opp, date=date, away_logo=away_logo, home_logo=home_logo)
