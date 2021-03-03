@@ -58,4 +58,64 @@ button:hover {
 
 #resultBlock {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#movieLogo {
+  flex-grow: 1;
+}
+
+#resultInfo {
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#appleLogo, #disneyLogo, #netflixLogo, #primeLogo {
+  flex-grow: 1;
+  height: 20vh;
+  width: 20vh;
+}
+
+#movieLogo {
+  height: 60vh;
+  width: 60vh;
+}
+
+#providerLogos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  vertical-align: bottom;
+}
+
+@media (max-width: 1200px) {
+  #resultBlock {
+    flex-direction: column;
+  }
+
+  #movieLogo {
+    height: 40vh;
+    width: 40vh;
+  }
+
+  #appleLogo, #disneyLogo, #netflixLogo, #primeLogo {
+    height: 10vh;
+    width: 10vh;
+  }
+
 }

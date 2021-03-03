@@ -1,9 +1,9 @@
 class Adventure:
-    def __init__(self, name, indoors, daytime, suppliesRequired):
+    def __init__(self, name, indoors, daytime, supplies_required):
         self.name = name
         self.indoors = indoors
         self.daytime = daytime
-        self.suppliesRequired = suppliesRequired
+        self.suppliesRequired = supplies_required
 
 
 a1 = Adventure(1, "true", "N/A", "true")

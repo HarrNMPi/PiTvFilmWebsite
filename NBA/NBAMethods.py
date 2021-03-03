@@ -2,6 +2,8 @@ from nba_api.stats.endpoints import leaguegamefinder
 from NBA import Teams2021 as Teams
 import random
 
+# https://github.com/swar/nba_api/blob/master/docs/examples/Finding%20Games.ipynb
+
 
 def get_opponent(matchup):
     if "vs" in matchup:

@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request
 
-from AdventureChallenge.adventureChallenge import get_adventure, format_input
-from NBA import NBAMethods
+from AdventureChallenge.adventureChallenge import get_adventure
 from NBA.NBAMethods import get_games
 from SpinTheWheel.PaintNumbers.PaintNumbers import get_paint_number
-from SpinTheWheel.Wheel import get_book, get_film, get_tv
+from SpinTheWheel.TvFilm.TMDb import search_movie_title, get_providers, check_netflix, check_apple, check_disney, \
+    check_amazon, find_film_info
+from SpinTheWheel.Wheel import get_book, get_tv, get_film
 
 app = Flask(__name__)
 
@@ -28,8 +29,8 @@ def tv_wheel():
 
 @app.route('/filmSpin')
 def film_wheel():
-    result = get_film()
-    return render_template("SpinTheWheel/filmSpin.html", result=result)
+    result = find_film_info()
+    return render_template("SpinTheWheel/filmSpin.html", result=result[0], film_logo=result[1], apple_logo=result[2], disney_logo=result[3], netflix_logo=result[4], prime_logo=result[5])
 
 
 @app.route('/bookSpin')
@@ -46,10 +47,10 @@ def paint_wheel():
 
 @app.route('/NBA')
 def nba():
-    answer_list = get_games()
-    team = answer_list[0]
-    opp = answer_list[1]
-    date = answer_list[2]
+    # answer_list = get_games()
+    team = "MIL"
+    opp = "DEN"
+    date = "2021-03-02"
     home_logo = "static/images/Logos/" + team + ".png"
     away_logo = "static/images/Logos/" + opp + ".png"
     return render_template('NBA.html', team=team, opp=opp, date=date, away_logo=away_logo, home_logo=home_logo)

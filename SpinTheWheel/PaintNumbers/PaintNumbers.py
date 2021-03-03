@@ -10,7 +10,7 @@ def get_paint_number():
     if format_x in data and len(data) >= 64:
         return "All numbers Completed"
     elif format_x in data:
-        get_paint_number()
+        return get_paint_number()
     else:
         u = open("SpinTheWheel/PaintNumbers/CompletedNumbers.txt", "a")
         u.write(str(x) + ",")

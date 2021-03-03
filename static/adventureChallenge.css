@@ -22,9 +22,25 @@ button:hover {
   flex-grow: 2;
 }
 
-#pageContainer {
+.pageContainer {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1100px) {
+  .pageContainer {
+    flex-direction: column;
+  }
+
+  select {
+    width: 30%;
+  }
+
+  label {
+    font-size: 30px;
+    margin: 30px;
+  }
 }
 
 #inputs {

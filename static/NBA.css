@@ -33,14 +33,14 @@ button:hover {
   color: white;
 }
 
-#resultBlock {
+.resultBlock {
   text-align: center;
   font-family: "Work Sans";
   font-size: 36px;
   height: 40vh;
 }
 
-#pageContainer {
+.pageContainer {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -51,7 +51,7 @@ button:hover {
 
 img {
   max-height: 100%;
-  min-width: 100%;
+  max-width: 100%;
   object-fit: contain;
   vertical-align: bottom;
 }
@@ -60,7 +60,18 @@ p {
   flex-grow: 1;
 }
 
-#homeLogo, #awayLogo {
+.logos {
   height: 40vh;
   width: 40vh;
+}
+
+@media (max-width: 1200px) {
+  .pageContainer {
+    flex-direction: column;
+  }
+
+  .logos {
+    height: 10vh;
+    width: 10vh;
+  }
 }
