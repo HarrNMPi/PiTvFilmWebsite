@@ -21,7 +21,18 @@
         </div>
         <button id="backButton" onClick="backClick()">Back</button>
         <div id="resultBlock">
-            <p id="result">{{result}}</p>
+            <p id="movieLogo">
+                <img src="{{film_logo}}">
+            </p>
+            <div id="resultInfo">
+                <p id="result">{{result}}</p>
+                <div id="providerLogos">
+                    <p id="appleLogo"><img src="{{apple_logo}}"></p>
+                    <p id="disneyLogo"><img src="{{disney_logo}}"></p>
+                    <p id="netflixLogo"><img src="{{netflix_logo}}"></p>
+                    <p id="primeLogo"><img src="{{prime_logo}}"></p>
+                </div>
+            </div>
         </div>
         <div id="spinAgainContainer">
             <button id="spinAgain" onclick="window.location.reload();">Spin Again</button>

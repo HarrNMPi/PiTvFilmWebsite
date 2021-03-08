@@ -3,9 +3,9 @@ from flask import Flask, render_template, request
 from AdventureChallenge.adventureChallenge import get_adventure
 from NBA.NBAMethods import get_games
 from SpinTheWheel.PaintNumbers.PaintNumbers import get_paint_number
-from SpinTheWheel.TvFilm.TMDb import search_movie_title, get_providers, check_netflix, check_apple, check_disney, \
-    check_amazon, find_film_info
-from SpinTheWheel.Wheel import get_book, get_tv, get_film
+from SpinTheWheel.TvFilm.TMDbFilm import find_film_info
+from SpinTheWheel.TvFilm.TMDbTv import find_tv_info
+from SpinTheWheel.Wheel import get_book, get_tv
 
 app = Flask(__name__)
 
@@ -23,14 +23,16 @@ def spin_the_wheel():
 
 @app.route('/tvSpin')
 def tv_wheel():
-    result = get_tv()
-    return render_template("SpinTheWheel/tvSpin.html", result=result)
+    result = find_tv_info()
+    return render_template("SpinTheWheel/tvSpin.html", result=result[0], film_logo=result[1], apple_logo=result[2],
+                           disney_logo=result[3], netflix_logo=result[4], prime_logo=result[5])
 
 
 @app.route('/filmSpin')
 def film_wheel():
     result = find_film_info()
-    return render_template("SpinTheWheel/filmSpin.html", result=result[0], film_logo=result[1], apple_logo=result[2], disney_logo=result[3], netflix_logo=result[4], prime_logo=result[5])
+    return render_template("SpinTheWheel/filmSpin.html", result=result[0], film_logo=result[1], apple_logo=result[2],
+                           disney_logo=result[3], netflix_logo=result[4], prime_logo=result[5])
 
 
 @app.route('/bookSpin')
