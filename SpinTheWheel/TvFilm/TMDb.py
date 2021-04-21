@@ -1,7 +1,8 @@
 import requests
+
 from SpinTheWheel.TvFilm import constants
 from SpinTheWheel.TvFilm.constants import grey_path
-from SpinTheWheel.Wheel import get_film
+
 
 # https://developers.themoviedb.org/3/getting-started/introduction
 
