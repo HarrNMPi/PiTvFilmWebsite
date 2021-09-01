@@ -1,4 +1,4 @@
-api_key = "0cabe7681cada55819a0bf68c97a95c2"
+api_key = "{api_key}"
 
 base_url = "https://api.themoviedb.org/3"
 

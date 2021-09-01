@@ -46,19 +46,19 @@ def get_list_formatted(content):
 
 
 def get_film_list():
-    content = sn.get_note("a74f34d0-6494-4388-8206-eac773459ed9")[0].get("content")
+    content = sn.get_note("{id}")[0].get("content")
     film_list = get_list_formatted(content)
     return film_list
 
 
 def get_tv_list():
-    content = sn.get_note("a1dac99ff06d4e39a50dee8b8f61e9c8")[0].get("content")
+    content = sn.get_note("{id}")[0].get("content")
     tv_list = get_list_formatted(content)
     return tv_list
 
 
 def get_book_list():
-    content = sn.get_note("d37783453d284856bb3846d684c0a9cc")[0].get("content")
+    content = sn.get_note("{id}}")[0].get("content")
     book_list = get_list_formatted(content)
     return book_list
 

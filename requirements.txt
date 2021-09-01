@@ -1,6 +1,4 @@
-# Flask Framework
 Flask==1.1.2
 simplenote
-nba_api
 pandas
 requests==2.25.1
