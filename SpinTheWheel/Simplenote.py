@@ -1,6 +1,6 @@
 import simplenote
 
-sn = simplenote.Simplenote("millypinotes@gmail.com", "millynotes8")
+sn = simplenote.Simplenote("email", "*************")
 
 # print(sn.get_note_list())
 
